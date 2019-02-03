@@ -1,0 +1,26 @@
+diff --git a/modules/webgui/CMakeLists.txt b/modules/webgui/CMakeLists.txt
+index d20643c3b..84c76d0a5 100644
+--- a/modules/webgui/CMakeLists.txt
++++ b/modules/webgui/CMakeLists.txt
+@@ -43,7 +43,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+ set(NODEJS_VERSION "8.11.4")
+ 
+ include(nodejs_support)
+-DownloadNodeJs("${NODEJS_VERSION}" "${CMAKE_CURRENT_SOURCE_DIR}/ext/nodejs")
+ 
+ create_new_module(
+     WebGui
+
+diff --git a/modules/webgui/webguimodule.cpp b/modules/webgui/webguimodule.cpp
+index ac5a1bcab..143545ea5 100644
+--- a/modules/webgui/webguimodule.cpp
++++ b/modules/webgui/webguimodule.cpp
+@@ -154,7 +154,7 @@ void WebGuiModule::startProcess() {
+ #ifdef _MSC_VER
+     const std::string nodePath = absPath("${MODULE_WEBGUI}/ext/nodejs/node.exe");
+ #else
+-    const std::string nodePath = absPath("${MODULE_WEBGUI}/ext/nodejs/node");
++    const std::string nodePath = absPath("/app/bin/node");
+ #endif
+ 
+     const std::string command = "\"" + nodePath + "\" "

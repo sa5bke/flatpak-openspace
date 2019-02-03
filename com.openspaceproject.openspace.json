@@ -1,0 +1,53 @@
+{
+    "app-id": "com.openspaceproject.OpenSpace",
+    "command": "/app/bin/OpenSpace",
+    "finish-args": [
+        "--socket=x11",
+        "--share=ipc",
+        "--share=network",
+        "--device=dri",
+        "--filesystem=home"
+    ],
+    "modules": [
+        "deps/boost-1.6.9.json",
+        "deps/minizip-1.2.11.json",
+        "deps/gdal-2.4.0.json",
+        "deps/glu-9.0.0.json",
+        "deps/freeglut-3.0.0.json",
+        "deps/soil.json",
+        "deps/node-8.11.4.json",
+        {
+            "builddir": true,
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DOPENSPACE_HAVE_TESTS=OFF"
+            ],
+            "name": "openspace",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/OpenSpace/OpenSpace.git"
+                },
+                {
+                    "path": "patches/sgct.patch",
+                    "type": "patch"
+                },
+                {
+                    "path": "patches/lua.patch",
+                    "type": "patch"
+                },
+                {
+                    "path": "patches/spice.patch",
+                    "type": "patch"
+                },
+                {
+                    "path": "patches/webgui.patch",
+                    "type": "patch"
+                }
+            ]
+        }
+    ],
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk"
+}

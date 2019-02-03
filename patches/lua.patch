@@ -1,0 +1,13 @@
+diff --git a/ext/ghoul/ext/lua/CMakeLists.txt b/ext/ghoul/ext/lua/CMakeLists.txt
+index dad92b0..b2dae78 100644
+--- a/ext/ghoul/ext/lua/CMakeLists.txt
++++ b/ext/ghoul/ext/lua/CMakeLists.txt
+@@ -58 +58,8 @@ else ()
+ endif ()
++
++INSTALL(
++       TARGETS Lua
++       ARCHIVE DESTINATION lib
++       LIBRARY DESTINATION lib
++       COMPONENT library
++)

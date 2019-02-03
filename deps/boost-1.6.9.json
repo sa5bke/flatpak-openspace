@@ -1,0 +1,16 @@
+{
+    "build-commands": [
+        "./bootstrap.sh --prefix=/app --with-libraries=system,filesystem,thread,chrono,date_time",
+        "./b2 headers",
+        "./b2 install"
+    ],
+    "buildsystem": "simple",
+    "name": "boost",
+    "sources": [
+        {
+            "sha256": "8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406",
+            "type": "archive",
+            "url": "https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+tmp/
+build/
+repo/
+repo-release/
+.flatpak-builder/
+*.flatpak
+*.backup

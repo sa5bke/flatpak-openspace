@@ -1,0 +1,13 @@
+diff --git a/ext/spice/CMakeLists.txt b/ext/spice/CMakeLists.txt
+index dad92b0..b2dae78 100644
+--- a/ext/spice/CMakeLists.txt
++++ b/ext/spice/CMakeLists.txt
+@@ -58 +58,8 @@ else ()
+ endif ()
++
++INSTALL(
++       TARGETS Spice
++       ARCHIVE DESTINATION lib
++       LIBRARY DESTINATION lib
++       COMPONENT library
++)

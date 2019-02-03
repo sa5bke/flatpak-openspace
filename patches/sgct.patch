@@ -1,0 +1,59 @@
+diff --git a/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h b/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
+index d7b443a7..91179002 100644
+--- a/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
++++ b/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
+@@ -51,7 +51,6 @@ For conditions of distribution and use, see copyright notice in sgct.h
+         */
+         //#include <GL/glxew.h>
+     #else  //linux
+-        #include <GL/glext.h>
+         #include <GL/glxew.h>
+     #endif
+ 
+diff --git a/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp b/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
+index 46a5b2d7..311a5ca5 100644
+--- a/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
++++ b/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
+@@ -8,10 +8,6 @@ For conditions of distribution and use, see copyright notice in sgct.h
+ #include <GL/glew.h>
+ #if __WIN32__
+ #include <GL/wglew.h>
+-#elif __LINUX__
+-#include <GL/glext.h>
+-#else
+-#include <OpenGL/glext.h>
+ #endif
+ #include <GLFW/glfw3.h>
+ 
+From 532fb6ab1a2a6bdcbab27bfe5603965633ec7717 Mon Sep 17 00:00:00 2001
+From: David '-1' Schmid <david-1.schmid@uni-ulm.de.de>
+Date: Thu, 2 Aug 2018 12:34:41 +0200
+Subject: [PATCH 1/2] fix redefinition error while linking
+
+---
+ include/sgct/helpers/SGCTPortedFunctions.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/apps/OpenSpace/ext/sgct/include/sgct/helpers/SGCTPortedFunctions.h b/apps/OpenSpace/ext/sgct/include/sgct/helpers/SGCTPortedFunctions.h
+index 5552cc3a..276c1435 100644
+--- a/apps/OpenSpace/ext/sgct/include/sgct/helpers/SGCTPortedFunctions.h
++++ b/apps/OpenSpace/ext/sgct/include/sgct/helpers/SGCTPortedFunctions.h
+@@ -56,7 +56,7 @@ static int vscwprintf(const wchar_t * format, va_list pargs)
+ #endif
+ #else
+   //Workaround for calling vscprintf() or vscwprintf() in a non-windows OS
+-  int vscprintf (const char * format, va_list pargs)
++  static int vscprintf (const char * format, va_list pargs)
+   {
+       int retval;
+       va_list argcopy;
+@@ -66,7 +66,7 @@ static int vscwprintf(const wchar_t * format, va_list pargs)
+       return retval;
+   }
+ 
+-  int vscwprintf(const wchar_t *format, va_list argptr)
++  static int vscwprintf(const wchar_t *format, va_list argptr)
+   {
+      return(vswprintf(0, 0, format, argptr));
+   }
+

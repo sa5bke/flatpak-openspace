@@ -1,0 +1,15 @@
+{
+    "builddir": true,
+    "buildsystem": "cmake",
+    "name": "soil",
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/paralin/soil"
+        },
+        {
+            "path": "soil.patch",
+            "type": "patch"
+        }
+    ]
+}

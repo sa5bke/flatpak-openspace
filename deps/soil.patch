@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c29d9bf..f42559a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -8,3 +8,11 @@ ADD_LIBRARY( soil STATIC
+   src/image_DXT.c
+   src/SOIL.c
+   )
++
++INSTALL(
++       TARGETS soil
++       ARCHIVE DESTINATION lib
++       LIBRARY DESTINATION lib
++       COMPONENT library
++)
++
+

@@ -1,0 +1,10 @@
+{
+    "name": "gdal",
+    "sources": [
+        {
+            "sha256": "a568cf3dc7bb203ae12a48e1eb2a42302cded499ef6eccaf9e8f09187d8ce75a",
+            "type": "archive",
+            "url": "http://download.osgeo.org/gdal/2.4.0/gdal-2.4.0.tar.gz"
+        }
+    ]
+}
