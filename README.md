@@ -7,6 +7,16 @@ This is a **work in progress** to compile and package [Open Space](https://www.o
 * Some planet images are not displaying correctly
 * A wrapper script should be included that will take care of setting up the environment
 
+## Prerequisites
+
+Download and install [Flatpak](https://www.flatpak.org/setup/) for your distribution and add **flathub** as an repo. Also install **flatpak-builder**. 
+
+To be able to run and comipile you also need the freedesktop runtime and SDK:
+
+`sudo flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08`
+
+You would also benefit from atleast **6 GB** of RAM to avoid swapping.
+
 ## How to install
 
 A repo will be added later, for now **flatpak-builder** is needed.
@@ -26,7 +36,7 @@ If you want to compile and run from local repo, follow these instructions:
 
 * Install
 
-`flatpak install openspace-local com.openspaceproject.OpenSpace`
+`flatpak --user install openspace-local com.openspaceproject.OpenSpace`
 
 ## How to run
 
@@ -36,7 +46,7 @@ These files/dirs are needed:
 
 `cache  config  data  documentation  logs  modules  openspace.cfg  screenshots  scripts  shaders  sync`
 
-Then modify **openspace.cfg** and add **BASE = "/var/data/"** to the paths.
+You also have to modify **openspace.cfg** and add **BASE = "/var/data/"** to the paths.
 
 To run OpenSpace:
 
