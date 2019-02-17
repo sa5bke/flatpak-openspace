@@ -1,30 +1,3 @@
-diff --git a/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h b/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
-index d7b443a7..91179002 100644
---- a/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
-+++ b/apps/OpenSpace/ext/sgct/include/sgct/ogl_headers.h
-@@ -51,7 +51,6 @@ For conditions of distribution and use, see copyright notice in sgct.h
-         */
-         //#include <GL/glxew.h>
-     #else  //linux
--        #include <GL/glext.h>
-         #include <GL/glxew.h>
-     #endif
- 
-diff --git a/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp b/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
-index 46a5b2d7..311a5ca5 100644
---- a/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
-+++ b/apps/OpenSpace/ext/sgct/src/sgct/Statistics.cpp
-@@ -8,10 +8,6 @@ For conditions of distribution and use, see copyright notice in sgct.h
- #include <GL/glew.h>
- #if __WIN32__
- #include <GL/wglew.h>
--#elif __LINUX__
--#include <GL/glext.h>
--#else
--#include <OpenGL/glext.h>
- #endif
- #include <GLFW/glfw3.h>
- 
 From 532fb6ab1a2a6bdcbab27bfe5603965633ec7717 Mon Sep 17 00:00:00 2001
 From: David '-1' Schmid <david-1.schmid@uni-ulm.de.de>
 Date: Thu, 2 Aug 2018 12:34:41 +0200

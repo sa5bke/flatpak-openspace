@@ -4,6 +4,13 @@ This is a **work in progress** to compile and package [Open Space](https://www.o
 
 ## Known issues / TODO
 
+There is a problem that the maintainer has currently:
+
+https://github.com/sa5bke/flatpak-openspace/issues/2
+
+That latest commit with fixes to glew has not been able to be tested, so please comment on your experiences with this.
+
+
 * Some planet images are not displaying correctly
 * A wrapper script should be included that will take care of setting up the environment
 

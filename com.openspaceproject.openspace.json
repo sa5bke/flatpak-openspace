@@ -43,6 +43,10 @@
                 {
                     "path": "patches/webgui.patch",
                     "type": "patch"
+                },
+                {
+                    "path": "patches/glew.patch",
+                    "type": "patch"
                 }
             ]
         }

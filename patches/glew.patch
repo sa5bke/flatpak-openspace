@@ -1,0 +1,63 @@
+diff --git a/apps/OpenSpace/ext/sgct/include/GL/glew.h a/apps/OpenSpace/ext/sgct/include/GL/glew.h
+index 9afa5c67..17ea2def 100644
+--- a/apps/OpenSpace/ext/sgct/include/GL/glew.h
++++ b/apps/OpenSpace/ext/sgct/include/GL/glew.h
+@@ -93,7 +93,7 @@
+ #if defined(__REGAL_H__)
+ #error Regal.h included before glew.h
+ #endif
+-#if defined(__glext_h_) || defined(__GLEXT_H_)
++#if defined(__glext_h_) || defined(__GLEXT_H_) || defined(__gl_glext_h_)
+ #error glext.h included before glew.h
+ #endif
+ #if defined(__gl_ATI_h_)
+@@ -108,6 +108,7 @@
+ #define __REGAL_H__
+ #define __X_GL_H
+ #define __glext_h_
++#define __gl_glext_h_
+ #define __GLEXT_H_
+ #define __gl_ATI_h_
+ 
+diff --git a/apps/OpenSpace/ext/sgct/src/deps/glew/auto/src/glew_head.h b/apps/OpenSpace/ext/sgct/src/deps/glew/auto/src/glew_head.h
+index c5592e11..bc3cefd3 100644
+--- a/apps/OpenSpace/ext/sgct/src/deps/glew/auto/src/glew_head.h
++++ b/apps/OpenSpace/ext/sgct/src/deps/glew/auto/src/glew_head.h
+@@ -14,7 +14,7 @@
+ #if defined(__REGAL_H__)
+ #error Regal.h included before glew.h
+ #endif
+-#if defined(__glext_h_) || defined(__GLEXT_H_)
++#if defined(__glext_h_) || defined(__GLEXT_H_) || defined(__gl_glext_h_)
+ #error glext.h included before glew.h
+ #endif
+ #if defined(__gl_ATI_h_)
+@@ -30,6 +30,7 @@
+ #define __X_GL_H
+ #define __glext_h_
+ #define __GLEXT_H_
++#define __gl_glext_h_
+ #define __gl_ATI_h_
+ 
+ #if defined(_WIN32)
+diff --git a/apps/OpenSpace/ext/sgct/src/deps/glew/include/GL/glew.h b/apps/OpenSpace/ext/sgct/src/deps/glew/include/GL/glew.h
+index 9afa5c67..17ea2def 100644
+--- a/apps/OpenSpace/ext/sgct/src/deps/glew/include/GL/glew.h
++++ b/apps/OpenSpace/ext/sgct/src/deps/glew/include/GL/glew.h
+@@ -93,7 +93,7 @@
+ #if defined(__REGAL_H__)
+ #error Regal.h included before glew.h
+ #endif
+-#if defined(__glext_h_) || defined(__GLEXT_H_)
++#if defined(__glext_h_) || defined(__GLEXT_H_) || defined(__gl_glext_h_)
+ #error glext.h included before glew.h
+ #endif
+ #if defined(__gl_ATI_h_)
+@@ -108,6 +108,7 @@
+ #define __REGAL_H__
+ #define __X_GL_H
+ #define __glext_h_
++#define __gl_glext_h_
+ #define __GLEXT_H_
+ #define __gl_ATI_h_
+ 
