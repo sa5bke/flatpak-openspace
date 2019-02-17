@@ -10,6 +10,7 @@ https://github.com/sa5bke/flatpak-openspace/issues/2
 
 That latest commit with fixes to glew has not been able to be tested, so please comment on your experiences with this.
 
+Other todos:
 
 * Some planet images are not displaying correctly
 * A wrapper script should be included that will take care of setting up the environment
