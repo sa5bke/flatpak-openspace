@@ -7,7 +7,7 @@ This is a **work in progress** to compile and package [OpenSpace](https://www.op
 * Some planet images are not displaying correctly
 * A wrapper script should be included that will take care of setting up the environment
 
-Feel free to add issues to this repo or join the #linux channel on the OpenSpace slack support channel. See [OpenSpace webpage](https://www.openspaceproject.com/) for links.
+Feel free to add issues to this repo or join the #linux channel on the OpenSpace slack. See [OpenSpace webpage](https://www.openspaceproject.com/) for links.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Download and install [Flatpak](https://www.flatpak.org/setup/) for your distribu
 
 To be able to run and compile you also need the freedesktop runtime and SDK:
 
-`sudo flatpak install flathub org.freedesktop.Platform//19.08 org.freedesktop.Sdk//19.08 org.freedesktop.Sdk.Extension.node10//19.08`
+`sudo flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//19.08`
 
 You would also benefit from atleast **6 GB** of RAM to avoid swapping.
 
