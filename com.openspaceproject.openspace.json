@@ -15,6 +15,7 @@
 	    "deps/glu-9.0.1.json",
 	    "deps/freeglut-3.2.1.json",
 	    "deps/soil.json",
+	    "deps/node-8.11.4.json",
 	    {
 		    "builddir": true,
 		    "buildsystem": "cmake",
@@ -50,9 +51,6 @@
 	    }
     ],
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
-    "sdk": "org.freedesktop.Sdk",
-    "sdk-extensions": [
-	    "org.freedesktop.Sdk.Extension.node10"
-    ]
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk"
 }
