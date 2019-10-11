@@ -4,12 +4,6 @@ This is a **work in progress** to compile and package [Open Space](https://www.o
 
 ## Known issues / TODO
 
-There is a problem that the maintainer has currently:
-
-https://github.com/sa5bke/flatpak-openspace/issues/2
-
-That latest commit with fixes to glew has not been able to be tested, so please comment on your experiences with this.
-
 Other todos:
 
 * Some planet images are not displaying correctly
@@ -21,7 +15,7 @@ Download and install [Flatpak](https://www.flatpak.org/setup/) for your distribu
 
 To be able to run and comipile you also need the freedesktop runtime and SDK:
 
-`sudo flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08`
+`sudo flatpak install flathub org.freedesktop.Platform//19.08 org.freedesktop.Sdk//19.08 org.freedesktop.Sdk.Extension.node10//19.08`
 
 You would also benefit from atleast **6 GB** of RAM to avoid swapping.
 
@@ -48,13 +42,13 @@ If you want to compile and run from local repo, follow these instructions:
 
 ## How to run
 
-You have to clone the [OpenSpace repo](https://github.com/OpenSpace/OpenSpace) and copy files to to **~/.var/app/com.openspaceproject.OpenSpace/data**
+You have to download the [OpenSpace Windows distribution (3.8 GB)](http://data.openspaceproject.com/release/0.15.0/OpenSpace-0.15.0.zip) and copy files to to **~/.var/app/com.openspaceproject.OpenSpace/data**
 
-These files/dirs are needed: 
+These dirs are needed: 
 
-`cache  config  data  documentation  logs  modules  openspace.cfg  screenshots  scripts  shaders  sync`
+`config data modules recordings scripts shaders sync`
 
-You also have to modify **openspace.cfg** and add **BASE = "/var/data/"** to the paths.
+You also have to copy the **openspace.cfg** and add **BASE = "/var/data/"** to the paths.
 
 To run OpenSpace:
 
