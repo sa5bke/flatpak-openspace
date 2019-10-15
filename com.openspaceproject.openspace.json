@@ -14,8 +14,8 @@
 	    "deps/gdal-2.4.0.json",
 	    "deps/glu-9.0.1.json",
 	    "deps/freeglut-3.2.1.json",
-	    "deps/soil.json",
 	    "deps/node-8.11.4.json",
+	    "deps/libdevil-1.7.8.json",
 	    {
 		    "builddir": true,
 		    "buildsystem": "cmake",
@@ -41,10 +41,6 @@
 			    },
 			    {
 				    "path": "patches/webgui.patch",
-				    "type": "patch"
-			    },
-			    {
-				    "path": "patches/glew.patch",
 				    "type": "patch"
 			    }
 		    ]
