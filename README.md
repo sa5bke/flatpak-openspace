@@ -2,9 +2,14 @@
 
 This is a **work in progress** to compile and package [OpenSpace](https://www.openspaceproject.com/) on Linux.
 
+![Screenshot](./openspace-mercury.png)
+
+
+
 ## Known issues / TODO
 
 * Some planet images are not displaying correctly
+* Crashes occur sometime
 * A wrapper script should be included that will take care of setting up the environment
 
 Feel free to add issues to this repo or join the #linux channel on the OpenSpace slack. See [OpenSpace webpage](https://www.openspaceproject.com/) for links.
@@ -17,7 +22,7 @@ To be able to run and compile you also need the freedesktop runtime and SDK:
 
 `sudo flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08`
 
-You would also benefit from atleast **6 GB** of RAM to avoid swapping.
+You would also benefit from atleast **6 GB** of RAM to avoid swapping. OpenSpace requires graphics support for OpenGL version 3.3. You can verify what drivers are used by flatpak by running `flatpak --gl-drivers`
 
 ## How to install
 
